@@ -1,0 +1,83 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\connection.ts" />
+    <Content Remove="wwwroot\js\controls.ts" />
+    <Content Remove="wwwroot\js\game\test.ts" />
+    <Content Remove="wwwroot\js\loader.ts" />
+    <Content Remove="wwwroot\js\platform.ts" />
+    <Content Remove="wwwroot\js\resources.ts" />
+    <Content Remove="wwwroot\js\room.ts" />
+    <Content Remove="wwwroot\js\rtc.ts" />
+    <Content Remove="wwwroot\js\ui.ts" />
+    <Content Remove="wwwroot\js\utils.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="threejs.TypeScript.DefinitelyTyped" Version="3.3.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Evaluator">
+      <HintPath>..\..\Evaluator\Evaluator\bin\Debug\Evaluator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\js\connection.ts" />
+    <TypeScriptCompile Include="wwwroot\js\game\test.ts" />
+    <TypeScriptCompile Include="wwwroot\js\loader.ts" />
+    <TypeScriptCompile Include="wwwroot\js\platform.ts" />
+    <TypeScriptCompile Include="wwwroot\js\resources.ts" />
+    <TypeScriptCompile Include="wwwroot\js\room.ts" />
+    <TypeScriptCompile Include="wwwroot\js\rtc.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\detector.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-canvasrenderer.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-copyshader.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-css3drenderer.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-editorcontrols.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-effectcomposer.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-FirstPersonControls.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-maskpass.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-orbitcontrols.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-orthographictrackballcontrols.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-projector.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-renderpass.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-shaderpass.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-trackballcontrols.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-transformcontrols.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-vrcontrols.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three-vreffect.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\typings\threejs\three.d.ts" />
+    <TypeScriptCompile Include="wwwroot\js\ui.ts" />
+    <TypeScriptCompile Include="wwwroot\js\controls.ts" />
+    <TypeScriptCompile Include="wwwroot\js\utils.ts" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+
+</Project>

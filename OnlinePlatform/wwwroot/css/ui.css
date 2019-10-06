@@ -1,0 +1,288 @@
+﻿@keyframes appear {
+    0% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1.0;
+    }
+
+    100% {
+        opacity: 0.0;
+    }
+}
+
+body {
+    margin: 0px;
+    font-family: Tahoma;
+}
+
+img {
+    border: none;
+}
+
+#loading, #main {
+    min-width: 800px;
+    min-height: 480px;
+}
+
+.hidden {
+    display: none;
+}
+
+.hud {
+    opacity: 0.9;
+}
+
+.noselect, .hud {
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Загрузочное сообщение */
+#loading {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    z-index: 10;
+}
+
+#loading > .load-box {
+    margin: auto;
+    width: 400px;
+    margin-top: 200px;
+    padding: 10px 10px 15px 10px;
+    border-radius: 8px;
+    background-color: #efefef;
+    box-shadow: silver 5px 5px 5px;
+}
+
+.load-box > .load-title {
+    text-align: center;
+    font-size: 24pt;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.load-box > .pg-bar {
+    height: 14px;
+    border: 1px solid #888888;
+    margin: auto;
+    margin-top: 25px;
+    display: none;
+}
+
+.load-box > .pg-bar > .pg-bar-fill {
+    background-color: #888888;
+    width: 0%;
+    height: 15px;
+}
+
+#main {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+}
+
+#main canvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+/* Всплывающее сообщение */
+#main .popup,
+#message {
+    position: absolute;
+    color: white;
+    z-index: 5;
+}
+
+#main .popup {
+    right: 5px;
+    padding: 5px;
+    line-height: 16px;
+    width: 250px;
+    border-radius: 4px;
+    background-color: rgba(60, 60, 60, 0.5);
+    text-overflow: ellipsis;
+    font-size: 10pt;
+}
+
+#message {
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
+    font-size: 14pt;
+    padding: 8px 12px;
+    background-color: rgba(25, 25, 25, 0.7);
+    border-radius: 8px;
+    overflow-x: hidden;
+}
+
+#message.showing {
+    animation-name: appear;
+    animation-duration: 0.5s;
+}
+
+#message.hiding {
+    animation-name: disappear;
+    animation-duration: 0.5s;
+}
+
+#message .info {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid white;
+    width: 24px;
+    border-radius: 24px;
+    margin-right: 4px;
+}
+
+#message .text {
+    text-overflow: ellipsis;
+}
+
+/* Курсор для выбора объектов сцены */
+.render.pickable {
+    cursor: pointer;
+}
+
+/* Диалоговые окна */
+.otgp-dialog {
+    position: fixed;
+    left: 50%;
+    right: auto;
+    top: 150px;
+    transform: translateX(-50%);
+    padding: 10px;
+    min-width: 400px;
+    min-height: 50px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: #333333 0px 0px 10px;
+    z-index: 15;
+    display: none;
+}
+
+.otgp-dialog.v-centered {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.otgp-dialog.shown {
+    display: block;
+}
+
+.otgp-backdrop {
+    content: '';
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 10;
+    display: none;
+}
+
+.otgp-backdrop.shown {
+    display: block;
+}
+
+/* Диалог обрыва соединения */
+#connectErrorDialog {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+#connectErrorDialog > .error-sign {
+    color: red;
+    font-weight: bold;
+    font-size: 24pt;
+    margin-bottom: 5px;
+}
+
+#connectErrorDialog > .error-text {
+    font-size: larger;
+}
+
+#gameUI {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+/* Индикатор состояния связи WebRTC */
+#rtcStateIndicator {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 32px;
+    border: 2px solid white;
+    background-color: #eeeeee;
+    text-align: center;
+    z-index: 5;
+}
+
+#rtcStateIndicator img {
+    margin-top: 4px;
+}
+
+#rtcStateIndicator.connected {
+    background-color: #33ff33;
+}
+
+#rtcStateIndicator.error {
+    background-color: #ff3333;
+}
+
+/** Аватары игроков */
+#avatars {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    z-index: 5;
+}
+
+#avatars .av-holder {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border: 2px solid gray;
+    line-height: 48px;
+    text-align: center;
+    margin: 0px 2px;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+#avatars .av-holder.active {
+    box-shadow: white 0px 0px 10px;
+}

@@ -1,0 +1,126 @@
+﻿@model HomeIndexModel
+@{
+    ViewData["Title"] = "Домашняя";
+}
+
+<p class="h2">
+    Онлайн-планформа для настольных игр
+</p>
+
+<hr />
+
+@if (Model.IsSigned)
+{
+    var session = Model.PlayerSession;
+
+    <p class="lead">
+        Сеанс текущего игрока
+    </p>
+    <div class="form form-horizontal well well-sm">
+        <div class="form-group">
+            <label class="control-label col-md-1">Игра:</label>
+            <div class="col-md-11">
+                <label class="form-control-static">
+                    @session.GameName
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-1">Начата:</label>
+            <div class="col-md-11">
+                <label class="form-control-static">
+                    @String.Format("{0:d} {0:HH:mm}", session.StartedAt)
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-1">Игроков:</label>
+            <div class="col-md-11">
+                <label class="form-control-static">
+                    @session.PlayersCount / @session.MaxPlayersCount
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <a class="btn btn-primary" asp-action="Index" asp-controller="Game">
+                    Продолжить
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+}
+else
+{
+    <p class="lead">
+        Доступные игры
+    </p>
+    @using (Html.BeginForm("NewSession", "Home", FormMethod.Post))
+    {
+        <table class="table table-hover">
+            <tr>
+                <th>Название</th>
+                <th class="col-md-1">Действия</th>
+            </tr>
+            @foreach (var info in Model.AvailableGames)
+            {
+                <tr>
+                    <td>
+                        <span class="caption">@info.Name</span>
+                        <div class="text-muted">
+                            @info.Path
+                        </div>
+                    </td>
+                    <td>
+                        @if (info.IsValid)
+                        {
+                            <button class="btn btn-sm btn-default" name="id" value="@info.Name">
+                                <span class="glyphicon glyphicon-asterisk"></span>
+                                Новый сеанс
+                            </button>
+                        }
+                        else
+                        {
+                            <strong class="text-danger">
+                                Подготовить все файлы
+                            </strong>
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+}
+<hr />
+
+<p class="lead">
+    Активные сеансы
+</p>
+
+@if (Model.ActiveSessions.Count > 0)
+{
+    <table class="table table-hover">
+        <tr>
+            <th class="col-md-4">Название игры</th>
+            <th class="col-md-3">Начата</th>
+            <th class="col-md-3">Ведущий</th>
+            <th class="col-md-2">Число игроков</th>
+        </tr>
+        @foreach(var sInfo in Model.ActiveSessions)
+        {
+            <tr>
+                <td>@sInfo.GameName</td>
+                <td>@String.Format("{0:d} {0:HH:mm}", sInfo.StartedAt)</td>
+                <td>@sInfo.GameMasterName</td>
+                <td>@sInfo.PlayersCount / @sInfo.MaxPlayersCount</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        - Нет активных сеансов игры -
+    </div>
+}

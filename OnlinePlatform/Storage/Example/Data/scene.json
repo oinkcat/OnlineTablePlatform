@@ -1,0 +1,291 @@
+{
+	"Id": "example_1",
+	"SkyboxName": "night",
+	"CameraTarget": [0, 14, 0],
+	"Distance": 22,
+	"Seats": [
+		[0, 18, -20],
+		[15.637, 18, -12.47],
+		[19.499, 18, 4.45],
+		[8.678, 18, 18.019],
+		[-8.678, 18, 18.019],
+		[-19.499, 18, 4.45],
+		[-15.637, 18, -12.47]
+	],
+	"POVs": [
+		{
+			"Name": "Default",
+			"Positions": null,
+			"Targets": null
+		},
+		{
+			"Name": "Sector",
+			"Positions": [
+				[0, 18.5, -12],
+				[9.382, 18.5, -7.482],
+				[11.699, 18.5, 2.67],
+				[5.207, 18.5, 10.812],
+				[-5.207, 18.5, 10.812],
+				[-11.699, 18.5, 2.67],
+				[-9.382, 18.5, -7.482]
+			],
+			"Targets": [
+				[0, 12.8, -10.5],
+				[8.209, 12.8, -6.547],
+				[10.237, 12.8, 2.336],
+				[4.556, 12.8, 9.46],
+				[-4.556, 12.8, 9.46],
+				[-10.237, 12.8, 2.336],
+				[-8.209, 12.8, -6.547]
+			]
+		},
+		{
+			"Name": "Table",
+			"Positions": [
+				[0, 25, -20],
+				[15.637, 25, -12.47],
+				[19.499, 25, 4.45],
+				[8.678, 25, 18.019],
+				[-8.678, 25, 18.019],
+				[-19.499, 25, 4.45],
+				[-15.637, 25, -12.47]
+			],
+			"Targets": null
+		}
+	],
+	"Lights": [
+		{
+			"Type": "ambient",
+			"Color": "white",
+			"Intensity": 0.07,
+			"Position": [0, 0, 0]
+		},
+		{
+			"Type": "directional",
+			"Color": "white",
+			"Intensity": 0.5,
+			"Position": [40, 100, 0]
+		},
+		{
+			"Type": "point",
+			"Color": "#ffdd88",
+			"Intensity": 0.6,
+			"Position": [-20, 45, 30]
+		},
+		{
+			"Type": "point",
+			"Color": "#ffdd88",
+			"Intensity": 0.6,
+			"Position": [-20, 45, -30]
+		},
+		{
+			"Type": "point",
+			"Color": "#ffdd88",
+			"Intensity": 0.6,
+			"Position": [20, 45, -30]
+		}
+	],
+	"Objects": [
+		{
+			"Id": "gems_1",
+			"Name": "horizontal",
+			"Position": [0, 12.8, -12],
+			"Rotation": [0, 0, 0]
+		},
+		{
+			"Id": "gems_2",
+			"Name": "horizontal",
+			"Position": [9.382, 12.8, -7.482],
+			"Rotation": [0, -0.898, 0]
+		},
+		{
+			"Id": "gems_3",
+			"Name": "horizontal",
+			"Position": [11.699, 12.8, 2.67],
+			"Rotation": [0, -1.795, 0]
+		},
+		{
+			"Id": "gems_4",
+			"Name": "horizontal",
+			"Position": [5.207, 12.8, 10.812],
+			"Rotation": [0, -2.693, 0]
+		},
+		{
+			"Id": "gems_5",
+			"Name": "horizontal",
+			"Position": [-5.207, 12.8, 10.812],
+			"Rotation": [0, -3.59, 0]
+		},
+		{
+			"Id": "gems_6",
+			"Name": "horizontal",
+			"Position": [-11.699, 12.8, 2.67],
+			"Rotation": [0, -4.488, 0]
+		},
+		{
+			"Id": "gems_7",
+			"Name": "horizontal",
+			"Position": [-9.382, 12.8, -7.482],
+			"Rotation": [0, -5.386, 0]
+		},
+		{
+			"Id": "cards_1",
+			"Name": "horizontal_wide",
+			"Position": [0, 12.8, -10.5],
+			"Rotation": [0, 0, 0]
+		},
+		{
+			"Id": "cards_2",
+			"Name": "horizontal_wide",
+			"Position": [8.209, 12.8, -6.547],
+			"Rotation": [0, -0.898, 0]
+		},
+		{
+			"Id": "cards_3",
+			"Name": "horizontal_wide",
+			"Position": [10.237, 12.8, 2.336],
+			"Rotation": [0, -1.795, 0]
+		},
+		{
+			"Id": "cards_4",
+			"Name": "horizontal_wide",
+			"Position": [4.556, 12.8, 9.46],
+			"Rotation": [0, -2.693, 0]
+		},
+		{
+			"Id": "cards_5",
+			"Name": "horizontal_wide",
+			"Position": [-4.556, 12.8, 9.46],
+			"Rotation": [0, -3.59, 0]
+		},
+		{
+			"Id": "cards_6",
+			"Name": "horizontal_wide",
+			"Position": [-10.237, 12.8, 2.336],
+			"Rotation": [0, -4.488, 0]
+		},
+		{
+			"Id": "cards_7",
+			"Name": "horizontal_wide",
+			"Position": [-8.209, 12.8, -6.547],
+			"Rotation": [0, -5.386, 0]
+		},
+		{
+			"Id": "score_1",
+			"Name": "circular",
+			"Position": [0, 12.8, -6.3],
+			"Rotation": [0, 0, 0]
+		},
+		{
+			"Id": "score_2",
+			"Name": "circular",
+			"Position": [4.926, 12.8, -3.928],
+			"Rotation": [0, 0, 0]
+		},
+		{
+			"Id": "score_3",
+			"Name": "circular",
+			"Position": [6.142, 12.8, 1.402],
+			"Rotation": [0, 0, 0]
+		},
+		{
+			"Id": "score_4",
+			"Name": "circular",
+			"Position": [2.733, 12.8, 5.676],
+			"Rotation": [0, 0, 0]
+		},
+		{
+			"Id": "score_5",
+			"Name": "circular",
+			"Position": [-2.733, 12.8, 5.676],
+			"Rotation": [0, 0, 0]
+		},
+		{
+			"Id": "score_6",
+			"Name": "circular",
+			"Position": [-6.142, 12.8, 1.402],
+			"Rotation": [0, 0, 0]
+		},
+		{
+			"Id": "score_7",
+			"Name": "circular",
+			"Position": [-4.926, 12.8, -3.928],
+			"Rotation": [0, 0, 0]
+		},
+		{
+			"Id": "scene",
+			"Name": "room",
+			"Position": [0, 0, 0],
+			"Rotation": [0, 0, 0],
+			"Scale": [1, 1, 1]
+		},
+		{
+			"Id": "details",
+			"Name": "room_details",
+			"Position": [0, 0, 0],
+			"Rotation": [0, 0, 0],
+			"Scale": [1, 1, 1]
+		},
+		{
+			"Name": "table",
+			"Position": [0, 0, 0],
+			"Rotation": [0, 0, 0],
+			"Scale": [1, 1, 1]
+		},
+		{
+			"Name": "field",
+			"Position": [0, 12.8, 0],
+			"Rotation": [0, 0, 0],
+			"Scale": [1, 1, 1]
+		},
+		{
+			"Id": "sphere",
+			"Name": "sphere",
+			"Position": [0, 12.8, 0],
+			"Rotation": [0, 0, 0],
+			"Scale": [1, 1, 1]
+		},
+		{
+			"Id": "sector_1",
+			"Name": "sector1",
+			"Position": [0, 12.8, 0],
+			"Rotation": [0, 3.1415926, 0]
+		},
+		{
+			"Id": "sector_2",
+			"Name": "sector2",
+			"Position": [0, 12.8, 0],
+			"Rotation": [0, 3.1415926, 0]
+		},
+		{
+			"Id": "sector_3",
+			"Name": "sector3",
+			"Position": [0, 12.8, 0],
+			"Rotation": [0, 3.1415926, 0]
+		},
+		{
+			"Id": "sector_4",
+			"Name": "sector4",
+			"Position": [0, 12.8, 0],
+			"Rotation": [0, 3.1415926, 0]
+		},
+		{
+			"Id": "sector_5",
+			"Name": "sector5",
+			"Position": [0, 12.8, 0],
+			"Rotation": [0, 3.1415926, 0]
+		},
+		{
+			"Id": "sector_6",
+			"Name": "sector6",
+			"Position": [0, 12.8, 0],
+			"Rotation": [0, 3.1415926, 0]
+		},
+		{
+			"Id": "sector_7",
+			"Name": "sector7",
+			"Position": [0, 12.8, 0],
+			"Rotation": [0, 3.1415926, 0]
+		}
+	]
+}

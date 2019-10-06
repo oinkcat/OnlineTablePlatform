@@ -1,0 +1,104 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/ui.css" />
+    <title>OTGP test</title>
+
+    <style>
+        #testDialog {
+            text-align: center;
+        }
+
+        #testDialog img {
+            width: 350px;
+            height: 480px;
+            border-radius: 20px;
+            box-shadow: gray 0px 0px 10px;
+        }
+
+        /* Цвета */
+        #avatars .av-holder.s1 {
+            border-color: red;
+        }
+
+        #avatars .av-holder.s2 {
+            border-color: orange;
+        }
+
+        #avatars .av-holder.s3 {
+            border-color: yellow;
+        }
+
+        #avatars .av-holder.s4 {
+            border-color: green;
+        }
+
+        #avatars .av-holder.s5 {
+            border-color: cyan;
+        }
+
+        #avatars .av-holder.s6 {
+            border-color: blue;
+        }
+
+        #avatars .av-holder.s7 {
+            border-color: magenta;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Экран загрузки -->
+    <section id="loading">
+        <div class="load-box">
+            <div class="load-title">
+                <span>Инициализация...</span>
+            </div>
+            <div class="pg-bar">
+                <div class="pg-bar-fill"></div>
+            </div>
+        </div>
+
+        <!-- Для процедурного рендеринга текстур -->
+        <canvas id="textureCanvas" class="hidden"></canvas>
+    </section>
+
+    <!-- Основная секция -->
+    <section id="main">
+        <!-- Основной интерфейс -->
+        <div class="otgp-backdrop"></div>
+        <div class="otgp-dialog v-centered" id="connectErrorDialog">
+            <div class="error-sign">&times;</div>
+            <div class="error-text">Соединение с сервером разорвано!</div>
+        </div>
+
+        <div id="message" class="hidden">
+            <span class="info">i</span>
+            <span class="text"></span>
+        </div>
+
+        <div class="peerAudio">
+            <audio id="myAudio"></audio>
+        </div>
+
+        <!-- Для игры -->
+        <div class="otgp-dialog v-centered" id="testDialog">
+            <img alt="card" />
+        </div>
+    </section>
+
+    <section id="gameUI">
+        <div class="hud" id="avatars"></div>
+
+        <div class="hud" id="rtcStateIndicator">
+            <img src="~/images/mic1.png" class="noselect" alt="mic" />
+        </div>
+    </section>
+
+    <script type="text/javascript" src="~/js/require.js" data-main="/js/platform.js"></script>
+</body>
+</html>

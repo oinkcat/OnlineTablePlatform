@@ -1,0 +1,144 @@
+[
+	{
+		"Name": "horizontal",
+		"GroupName": "_layout",
+		"Params": {
+			"Spacing": 0.4
+		}
+	},
+	{
+		"Name": "horizontal_wide",
+		"GroupName": "_layout",
+		"Params": {
+			"Spacing": 0.3
+		}
+	},
+	{
+		"Name": "circular",
+		"GroupName": "_layout",
+		"Params": {
+			"Type": 1,
+			"Radius": 0.5
+		}
+	},
+	{
+		"Name": "room",
+		"GroupName": "static",
+		"Dimensions": [60.529, 60.866, 80.665]
+	},
+	{
+		"Name": "room_details",
+		"GroupName": "static",
+		"Dimensions": [60.529, 60.866, 80.665]
+	},
+	{
+		"Name": "table",
+		"GroupName": "static",
+		"Dimensions": [26.936, 12.781, 26.526]
+	},
+	{
+		"Name": "field",
+		"GroupName": "field",
+		"Dimensions": [20.284, 0.0, 20.284]
+	},
+	{
+		"Name": "sphere",
+		"GroupName": "field",
+		"Dimensions": [3.137, 3.420, 3.160]
+	},
+	{
+		"Name": "gem1",
+		"GroupName": "resource",
+		"Dimensions": [0.610, 0.432, 0.527]
+	},
+	{
+		"Name": "gem2",
+		"GroupName": "resource",
+		"Dimensions": [0.563, 0.553, 0.563]
+	},
+	{
+		"Name": "gem3",
+		"GroupName": "resource",
+		"Dimensions": [0.552, 0.133, 0.552]
+	},
+	{
+		"Name": "gem4",
+		"GroupName": "resource",
+		"Dimensions": [0.689, 0.554, 0.576]
+	},
+	{
+		"Name": "gem5",
+		"GroupName": "resource",
+		"Dimensions": [0.689, 0.554, 0.576]
+	},
+	{
+		"Name": "gem6",
+		"GroupName": "resource",
+		"Dimensions": [0.689, 0.541, 0.542]
+	},
+	{
+		"Name": "gem7",
+		"GroupName": "resource",
+		"Dimensions": [0.563, 0.216, 0.563]
+	},
+	{
+		"Name": "stone1",
+		"GroupName": "resource",
+		"Dimensions": [0.363, 0.233, 0.382]
+	},
+	{
+		"Name": "stone2",
+		"GroupName": "resource",
+		"Dimensions": [0.352, 0.226, 0.340]
+	},
+	{
+		"Name": "card",
+		"GroupName": "resource",
+		"Dimensions": [0.916, 0.002, 1.374]
+	},
+	{
+		"Name": "card_deck",
+		"GroupName": "field",
+		"Dimensions": [0.916, 0.198, 1.374]
+	},
+	{
+		"Name": "sector1",
+		"GroupName": "field",
+		"Dimensions": [0, 0, 0]
+	},
+	{
+		"Name": "sector2",
+		"GroupName": "field",
+		"Dimensions": [0, 0, 0]
+	},
+	{
+		"Name": "sector3",
+		"GroupName": "field",
+		"Dimensions": [0, 0, 0]
+	},
+	{
+		"Name": "sector4",
+		"GroupName": "field",
+		"Dimensions": [0, 0, 0]
+	},
+	{
+		"Name": "sector5",
+		"GroupName": "field",
+		"Dimensions": [0, 0, 0]
+	},
+	{
+		"Name": "sector6",
+		"GroupName": "field",
+		"Dimensions": [0, 0, 0]
+	},
+	{
+		"Name": "sector7",
+		"GroupName": "field",
+		"Dimensions": [0, 0, 0]
+	},
+	{
+		"Name": "player",
+		"GroupName": "field",
+		"Dimensions": [10, 10, 10]
+	}
+]
