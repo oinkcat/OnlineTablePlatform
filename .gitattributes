@@ -61,3 +61,8 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+# Exclude JS libraries from language stats
+three.js linguist-vendored=true
+three.min.js linguist-vendored=true
+three.module.js linguist-vendored=true
