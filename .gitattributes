@@ -66,3 +66,5 @@
 OnlinePlatform/wwwroot/js/three.js linguist-vendored=true
 OnlinePlatform/wwwroot/js/three.min.js linguist-vendored=true
 OnlinePlatform/wwwroot/js/three.module.js linguist-vendored=true
+OnlinePlatform/wwwroot/js/OrbitControls.js linguist-vendored=true
+OnlinePlatform/wwwroot/js/require.js linguist-vendored=true
