@@ -63,6 +63,6 @@
 #*.RTF   diff=astextplain
 
 # Exclude JS libraries from language stats
-three.js linguist-vendored=true
-three.min.js linguist-vendored=true
-three.module.js linguist-vendored=true
+OnlinePlatform/wwwroot/js/three.js linguist-vendored=true
+OnlinePlatform/wwwroot/js/three.min.js linguist-vendored=true
+OnlinePlatform/wwwroot/js/three.module.js linguist-vendored=true
